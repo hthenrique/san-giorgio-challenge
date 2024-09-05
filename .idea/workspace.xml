@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paymentDatabase.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/exception/DatabaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/exception/HandleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/exception/ServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/ChargesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/CreateChargeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/CreateSellerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/SellersResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/ServiceResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/database/Charge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/database/Seller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/error/ErrorTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/ChargeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/SellerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/type/Codes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2lc7Wo5grvEhURlRiAqQDmxuSeM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Henrique Teixeira/Projetos/Java/san-giorgio-challenge/src/main/java/ht/henrique/model",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge\src\main\java\ht\henrique\model" />
+      <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ht.henrique.type" />
+      <recent name="ht.henrique.model" />
+      <recent name="ht.henrique.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.Main" />
+      <module name="san-giorgio-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ht.henrique.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="san-giorgio-challenge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="san-giorgio-challenge" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="" />
+      <created>1725467546721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725467546721</updated>
+    </task>
+    <servers />
+  </component>
+</project>
