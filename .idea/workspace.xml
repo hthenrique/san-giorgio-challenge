@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="">
+    <list default="true" id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="feat: create charge on database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/database/PaymentQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/PaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/PaymentQueueRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/ChargesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/ChargesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/CreateChargeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/request/CreateChargeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/CreateSellerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/request/CreateSellerRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/PaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/request/PaymentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/SellersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/SellersResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/ServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/ServiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/ChargeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/ChargeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/impl/PaymentServiceImpl.java" afterDir="false" />
     </list>
@@ -77,9 +72,9 @@
       <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ht.henrique.repository" />
       <recent name="ht.henrique.type" />
       <recent name="ht.henrique.model" />
-      <recent name="ht.henrique.repository" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,6 +106,19 @@
       <option name="presentableId" value="Default" />
       <updated>1725467546721</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: create charge on database">
+      <option name="closed" value="true" />
+      <created>1725745971321</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725745971321</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: create charge on database" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create charge on database" />
   </component>
 </project>

@@ -2,15 +2,16 @@ package ht.henrique.service.impl;
 
 import ht.henrique.exception.DatabaseException;
 import ht.henrique.exception.ServiceException;
+import ht.henrique.model.Payment;
 import ht.henrique.model.database.Charge;
+import ht.henrique.model.database.PaymentQueue;
 import ht.henrique.model.database.Seller;
 import ht.henrique.model.request.CreateChargeRequest;
 import ht.henrique.model.request.CreateSellerRequest;
 import ht.henrique.model.request.PaymentRequest;
-import ht.henrique.model.response.ChargesResponse;
-import ht.henrique.model.response.SellersResponse;
-import ht.henrique.model.response.ServiceResponse;
+import ht.henrique.model.response.*;
 import ht.henrique.repository.ChargeRepository;
+import ht.henrique.repository.PaymentQueueRepository;
 import ht.henrique.repository.SellerRepository;
 import ht.henrique.service.PaymentService;
 import ht.henrique.type.Codes;
@@ -18,6 +19,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -30,9 +33,61 @@ public class PaymentServiceImpl implements PaymentService {
     @Autowired
     private SellerRepository sellerRepository;
 
+    @Autowired
+    private PaymentQueueRepository paymentQueueRepository;
+
     @Override
-    public ServiceResponse payment(PaymentRequest paymentRequest) {
-        return null;
+    public ServiceResponse payment(PaymentRequest paymentRequest) throws DatabaseException {
+        Seller seller = findByCodSeller(paymentRequest.getCodSeller());
+        if (seller == null) {
+            throw new DatabaseException(Codes.INVALID_PARAMETERS, "Seller not found");
+        }
+
+        List<PaymentResponse> paymentResponses = new ArrayList<>();
+
+        for (Payment payment : paymentRequest.getPayments()) {
+            Charge charge = findByCodCharge(payment.getCodCharge());
+
+            if (charge == null) {
+                paymentResponses.add(new PaymentResponse(payment.getCodCharge(),
+                        payment.getPayValue(),
+                        "Charge not found",
+                        null));
+                continue;
+            }
+
+            BigDecimal originalValue = charge.get_value();
+            BigDecimal payValue = payment.getPayValue();
+            BigDecimal missingValue = originalValue.subtract(payValue);
+
+            String paymentType;
+            if (payValue.compareTo(originalValue) < 0) {
+                paymentType = "Partial";
+                paymentResponses.add(new PaymentResponse(charge.get_codCharge(),
+                        payValue,
+                        "Partial",
+                        missingValue));
+            } else if (payValue.compareTo(originalValue) == 0) {
+                paymentType = "Total";
+                paymentResponses.add(new PaymentResponse(charge.get_codCharge(),
+                        payValue,
+                        "Total",
+                        BigDecimal.ZERO));
+            } else {
+                paymentType = "Surplus";
+                paymentResponses.add(new PaymentResponse(charge.get_codCharge(),
+                        payValue,
+                        "Surplus",
+                        BigDecimal.ZERO));
+            }
+
+            savePaymentQueue(new PaymentQueue(paymentRequest.getCodSeller(),
+                    charge.get_codCharge(),
+                    payValue,
+                    paymentType));
+        }
+
+        return new ServiceResponse("200", "OK", paymentResponses);
     }
 
     @Override
@@ -65,6 +120,15 @@ public class PaymentServiceImpl implements PaymentService {
         saveCharge(createChargeRequest);
         log.info(String.format("Created charge: %s with success", createChargeRequest.getCodCharge()));
         return new ServiceResponse("201", "Created");
+    }
+
+    private void savePaymentQueue(PaymentQueue paymentQueue) throws DatabaseException {
+        try {
+            paymentQueueRepository.save(paymentQueue);
+        }catch (Exception e) {
+            log.error(e.getLocalizedMessage(), e);
+            throw new DatabaseException(Codes.INVALID_PARAMETERS, e.getLocalizedMessage());
+        }
     }
 
     private void saveSeller(CreateSellerRequest createSellerRequest) throws DatabaseException {

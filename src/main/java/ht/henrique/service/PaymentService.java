@@ -8,7 +8,7 @@ import ht.henrique.model.request.PaymentRequest;
 import ht.henrique.model.response.ServiceResponse;
 
 public interface PaymentService {
-    ServiceResponse payment(PaymentRequest paymentRequest);
+    ServiceResponse payment(PaymentRequest paymentRequest) throws DatabaseException;
     ServiceResponse findSellers() throws DatabaseException;
     ServiceResponse findCharges() throws DatabaseException;
     ServiceResponse createSeller(CreateSellerRequest createSellerRequest) throws DatabaseException, ServiceException;
