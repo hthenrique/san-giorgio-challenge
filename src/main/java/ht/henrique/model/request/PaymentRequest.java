@@ -1,5 +1,6 @@
-package ht.henrique.model;
+package ht.henrique.model.request;
 
+import ht.henrique.model.Payment;
 import lombok.Data;
 
 import java.util.List;

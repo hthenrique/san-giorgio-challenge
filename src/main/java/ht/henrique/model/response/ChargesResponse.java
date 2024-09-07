@@ -1,9 +1,8 @@
-package ht.henrique.model;
+package ht.henrique.model.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import ht.henrique.model.database.Charge;
-import ht.henrique.model.database.Seller;
 import lombok.Data;
 
 import java.util.List;

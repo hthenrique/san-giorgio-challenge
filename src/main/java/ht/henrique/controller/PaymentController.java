@@ -2,10 +2,10 @@ package ht.henrique.controller;
 
 import ht.henrique.exception.DatabaseException;
 import ht.henrique.exception.ServiceException;
-import ht.henrique.model.CreateChargeRequest;
-import ht.henrique.model.CreateSellerRequest;
-import ht.henrique.model.PaymentRequest;
-import ht.henrique.model.ServiceResponse;
+import ht.henrique.model.request.CreateChargeRequest;
+import ht.henrique.model.request.CreateSellerRequest;
+import ht.henrique.model.request.PaymentRequest;
+import ht.henrique.model.response.ServiceResponse;
 import ht.henrique.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,7 +42,7 @@ public class PaymentController {
     }
 
     @PostMapping("/create/charge")
-    public ResponseEntity<ServiceResponse> createCharge(@RequestBody CreateChargeRequest createChargeRequest) {
+    public ResponseEntity<ServiceResponse> createCharge(@RequestBody CreateChargeRequest createChargeRequest) throws ServiceException, DatabaseException {
         return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.createCharge(createChargeRequest));
     }
 }

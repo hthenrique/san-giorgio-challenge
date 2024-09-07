@@ -2,9 +2,14 @@ package ht.henrique.service.impl;
 
 import ht.henrique.exception.DatabaseException;
 import ht.henrique.exception.ServiceException;
-import ht.henrique.model.*;
 import ht.henrique.model.database.Charge;
 import ht.henrique.model.database.Seller;
+import ht.henrique.model.request.CreateChargeRequest;
+import ht.henrique.model.request.CreateSellerRequest;
+import ht.henrique.model.request.PaymentRequest;
+import ht.henrique.model.response.ChargesResponse;
+import ht.henrique.model.response.SellersResponse;
+import ht.henrique.model.response.ServiceResponse;
 import ht.henrique.repository.ChargeRepository;
 import ht.henrique.repository.SellerRepository;
 import ht.henrique.service.PaymentService;
@@ -53,8 +58,13 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public ServiceResponse createCharge(CreateChargeRequest createChargeRequest) {
-        return null;
+    public ServiceResponse createCharge(CreateChargeRequest createChargeRequest) throws ServiceException, DatabaseException {
+        if (findByCodCharge(createChargeRequest.getCodCharge()) != null) {
+            throw new ServiceException(Codes.INVALID_PARAMETERS, "Charge already exists");
+        }
+        saveCharge(createChargeRequest);
+        log.info(String.format("Created charge: %s with success", createChargeRequest.getCodCharge()));
+        return new ServiceResponse("201", "Created");
     }
 
     private void saveSeller(CreateSellerRequest createSellerRequest) throws DatabaseException {
@@ -63,6 +73,18 @@ public class PaymentServiceImpl implements PaymentService {
             seller.set_name(createSellerRequest.getName());
             seller.set_codSeller(createSellerRequest.getCodSeller());
             sellerRepository.save(seller);
+        }catch (Exception e) {
+            log.error(e.getLocalizedMessage(), e);
+            throw new DatabaseException(Codes.INVALID_PARAMETERS, e.getLocalizedMessage());
+        }
+    }
+
+    private void saveCharge(CreateChargeRequest createChargeRequest) throws DatabaseException {
+        try {
+            Charge charge = new Charge();
+            charge.set_codCharge(createChargeRequest.getCodCharge());
+            charge.set_value(createChargeRequest.getValue());
+            chargeRepository.save(charge);
         }catch (Exception e) {
             log.error(e.getLocalizedMessage(), e);
             throw new DatabaseException(Codes.INVALID_PARAMETERS, e.getLocalizedMessage());
@@ -81,6 +103,15 @@ public class PaymentServiceImpl implements PaymentService {
     private List<Seller> findAllSellers() throws DatabaseException {
         try {
             return sellerRepository.findAll();
+        }catch (Exception e) {
+            log.error(e.getLocalizedMessage(), e);
+            throw new DatabaseException(Codes.INVALID_PARAMETERS, e.getLocalizedMessage());
+        }
+    }
+
+    private Charge findByCodCharge(String codCharge) throws DatabaseException {
+        try {
+            return chargeRepository.findBy_codCharge(codCharge);
         }catch (Exception e) {
             log.error(e.getLocalizedMessage(), e);
             throw new DatabaseException(Codes.INVALID_PARAMETERS, e.getLocalizedMessage());

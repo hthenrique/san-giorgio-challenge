@@ -1,4 +1,4 @@
-package ht.henrique.model;
+package ht.henrique.model.request;
 
 import lombok.Data;
 
