@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "1637e8ed-56ab-4419-91d4-b6a602cce917",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9617620",
+		"_collection_link": "https://speeding-water-813120.postman.co/workspace/Team-Workspace~ab1b9590-1a58-4775-83b4-5255008724cb/collection/9617620-1637e8ed-56ab-4419-91d4-b6a602cce917?action=share&source=collection_link&creator=9617620"
+	},
+	"item": [
+		{
+			"name": "Sellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/find/sellers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find",
+						"sellers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Charges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/find/charges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find",
+						"charges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"SELLER\",\r\n    \"codSeller\": \"SELLER001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/create/seller",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"create",
+						"seller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Charge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codCharge\": \"CHG123\",\r\n    \"value\": 100.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/create/charge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"create",
+						"charge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codSeller\": \"SELLER001\",\r\n    \"payments\": [\r\n        {\r\n            \"codCharge\": \"CHG123\",\r\n            \"payValue\": 50.00\r\n        },\r\n        {\r\n            \"codCharge\": \"CHG124\",\r\n            \"payValue\": 100.00\r\n        },\r\n        {\r\n            \"codCharge\": \"CHG999\",\r\n            \"payValue\": 200.00\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
