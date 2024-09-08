@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="feat: create charge on database">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/database/PaymentQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/response/PaymentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/repository/PaymentQueueRepository.java" afterDir="false" />
+    <list default="true" id="f0986a3a-79aa-44b1-95ba-325ee6e14c13" name="Changes" comment="postman collection">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ht/henrique/controller/PaymentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ht/henrique/exception/HandleExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ht/henrique/service/impl/PaymentServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ht/henrique/util/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/model/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ht/henrique/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ht/henrique/service/impl/PaymentServiceImpl.java" afterDir="false" />
     </list>
@@ -23,6 +27,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,26 +55,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Henrique Teixeira/Projetos/Java/san-giorgio-challenge/src/main/java/ht/henrique/model&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "JUnit.HandleExceptionTest.executor": "Coverage",
+    "JUnit.PaymentControllerTest.testEndpoints.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.findSellers.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.payment.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.savePaymentQueueException.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.testCreateSellerException.executor": "Coverage",
+    "JUnit.PaymentServiceImplTest.testPaymentException.executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Henrique Teixeira/Projetos/Java/san-giorgio-challenge/src/main/java/ht/henrique/model",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge\src\main\java\ht\henrique\model" />
       <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Henrique Teixeira\Projetos\Java\san-giorgio-challenge" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ht.henrique.exception" />
+      <recent name="ht.henrique.service.impl" />
+      <recent name="ht.henrique.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ht.henrique.repository" />
@@ -77,23 +103,92 @@
       <recent name="ht.henrique.model" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ht.henrique.Main" />
+  <component name="RunManager" selected="JUnit.HandleExceptionTest">
+    <configuration name="HandleExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="san-giorgio-challenge" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ht.henrique.*" />
+          <option name="PATTERN" value="ht.henrique.exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ht.henrique.exception" />
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.exception.HandleExceptionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="san-giorgio-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ht.henrique.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ht.henrique.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.service.impl.PaymentServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceImplTest.findSellers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="san-giorgio-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ht.henrique.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ht.henrique.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.service.impl.PaymentServiceImplTest" />
+      <option name="METHOD_NAME" value="findSellers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceImplTest.savePaymentQueueException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="san-giorgio-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ht.henrique.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ht.henrique.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.service.impl.PaymentServiceImplTest" />
+      <option name="METHOD_NAME" value="savePaymentQueueException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceImplTest.testCreateSellerException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="san-giorgio-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ht.henrique.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ht.henrique.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="ht.henrique.service.impl.PaymentServiceImplTest" />
+      <option name="METHOD_NAME" value="testCreateSellerException" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.HandleExceptionTest" />
+        <item itemvalue="JUnit.PaymentServiceImplTest" />
+        <item itemvalue="JUnit.PaymentServiceImplTest.testCreateSellerException" />
+        <item itemvalue="JUnit.PaymentServiceImplTest.savePaymentQueueException" />
+        <item itemvalue="JUnit.PaymentServiceImplTest.findSellers" />
       </list>
     </recent_temporary>
   </component>
@@ -114,11 +209,52 @@
       <option name="project" value="LOCAL" />
       <updated>1725745971321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: payments">
+      <option name="closed" value="true" />
+      <created>1725751210440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725751210440</updated>
+    </task>
+    <task id="LOCAL-00003" summary="postman collection">
+      <option name="closed" value="true" />
+      <created>1725751466980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725751466980</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: create charge on database" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create charge on database" />
+    <MESSAGE value="feat: payments" />
+    <MESSAGE value="postman collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="postman collection" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest_savePaymentQueueException.ic" NAME="PaymentServiceImplTest.savePaymentQueueException Coverage Results" MODIFIED="1725754853704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest_testPaymentException.ic" NAME="PaymentServiceImplTest.testPaymentException Coverage Results" MODIFIED="1725753502616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest_findSellers.ic" NAME="PaymentServiceImplTest.findSellers Coverage Results" MODIFIED="1725753577640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentControllerTest_testEndpoints.ic" NAME="PaymentControllerTest.testEndpoints Coverage Results" MODIFIED="1725753296292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest_payment.ic" NAME="PaymentServiceImplTest.payment Coverage Results" MODIFIED="1725753418423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest.ic" NAME="PaymentServiceImplTest Coverage Results" MODIFIED="1725755217663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/san_giorgio_challenge$PaymentServiceImplTest_testCreateSellerException.ic" NAME="PaymentServiceImplTest.testCreateSellerException Coverage Results" MODIFIED="1725755151589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>ht.henrique.service.impl.*</FILTER>
+    </SUITE>
   </component>
 </project>

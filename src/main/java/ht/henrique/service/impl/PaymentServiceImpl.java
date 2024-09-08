@@ -37,10 +37,10 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentQueueRepository paymentQueueRepository;
 
     @Override
-    public ServiceResponse payment(PaymentRequest paymentRequest) throws DatabaseException {
+    public ServiceResponse payment(PaymentRequest paymentRequest) throws DatabaseException, ServiceException {
         Seller seller = findByCodSeller(paymentRequest.getCodSeller());
         if (seller == null) {
-            throw new DatabaseException(Codes.INVALID_PARAMETERS, "Seller not found");
+            throw new ServiceException(Codes.INVALID_PARAMETERS, "Seller not found");
         }
 
         List<PaymentResponse> paymentResponses = new ArrayList<>();

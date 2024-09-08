@@ -22,7 +22,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment")
-    public ResponseEntity<ServiceResponse> payment(@RequestBody PaymentRequest paymentRequest) throws DatabaseException {
+    public ResponseEntity<ServiceResponse> payment(@RequestBody PaymentRequest paymentRequest) throws DatabaseException, ServiceException {
         return ResponseEntity.ok(paymentService.payment(paymentRequest));
     }
 
